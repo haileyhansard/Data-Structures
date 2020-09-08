@@ -138,8 +138,3 @@ class LinkedList:
             #update the current node to the next node in the list
             current = current.get_next()
         return max_value
-
-# ll = LinkedList()
-# ll.add_to_tail(5)
-# print(ll.head)
-
