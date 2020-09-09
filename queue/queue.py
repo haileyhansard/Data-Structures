@@ -15,8 +15,8 @@ Stretch: What if you could only use instances of your Stack class to implement t
 """
 
 # Queue: FIRST IN FIRST OUT, like waiting in a pharmacy line, first one in line gets to receive rx and get out of store first
-# enqueue - adds to end
-# dequeue - removes the most recently added from the end
+# enqueue - adds an item to end of queue (tail)
+# dequeue - removes the front item (head or index[0])
 
 # ARRAY VERSION
 
