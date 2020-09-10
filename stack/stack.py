@@ -12,6 +12,10 @@ return elements in Last In First Out order.
 """
 
 #Stack: LAST IN FIRST OUT (like a stack of plates)
+# Push: we add (append) an item to the top of the stack (tail/ most recently added item)
+# Pop: we remove the item most recently added (tail)
+# a Stack is a recursive data structure. It is either empty, or, it consists of a top and the rest which is a stack.
+# ex of using a Stack in real world: undo mechanism in text editors. all text changes are kept in a stack, 
 
 # USING ARRAYS:
 # class Stack:
@@ -44,10 +48,12 @@ class Stack:
         return self.size
 
     def push(self, value):
+        #adds an item to the top of the stack (aka last in line)
         self.storage.add_to_tail(value)
         self.size += 1
 
     def pop(self):
+        #removes and returns the element at the top of the stack
         if self.size == 0:
             return None
         self.size -= 1

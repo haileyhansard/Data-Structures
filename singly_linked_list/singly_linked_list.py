@@ -1,8 +1,8 @@
 class Node:
     def __init__(self, value):
-        #the value that the node is holding
+        #the value that the current node is holding
         self.value = value
-        #reference to the next node in the linked list
+        #reference/pointer to the next node in the linked list
         self.next = None
     
     #method to get the value of the node
@@ -102,7 +102,7 @@ class LinkedList:
         else:
             # store the old head's value that we need to return
             val = self.head.get_value()
-            # set the `self.head` to the old head's `next_node`
+            # set the `self.head` to the old head's `next_node`, thus assigning the next node to head.
             self.head = self.head.get_next()
             #return the old_head's value
             return val
