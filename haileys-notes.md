@@ -60,3 +60,31 @@ for key, value in rooms.items(): #linear time operation
 ## QUEUES:
 - First In First Out.  FIFO
 - Like a line at the pharmacy. The first in line gets helped, then is first to leave the line.
+
+#-------------------------------------
+## RECURSION:
+- Another way of thinking about iteration. 
+- example: calling the function again in order to move the search along
+- (1) we need at least one base case. this will be the stopping criteria. When we encouter this, we stop the recursion.
+- (2) we need a way to move closer to a base case.
+- iterative solutions have these 2 requirements as well, just spelled out differently.
+- in iterative scenario: we are returning (True) when we find the target, or we have iterated through the entire array and did not find target (False). Looping aspect is more front and center in the iterative scenario.
+    def search(arr, target):
+        for n in arr:
+            if n == target:
+                return True
+        return False
+
+    arr = [5, 17, 8, 9, 3, 14]
+    print(serach(arr, 3))
+
+- in recursive scenario: we are going to flip it on its head. If array starts out empty, we return False because target is not in there. If last value is target, stop and return True. If not, repeat the search process on the next value, return if True. If not, repeat the search value on the next value, return if True.
+    def search(arr, target):
+        if len(arr) == 0:
+            return False
+        if arr[-1] == target:
+            return True
+        return search(arr[:-1], target)
+        
+    arr = [5, 17, 8, 9, 3, 14]
+    print(serach(arr, 3))
